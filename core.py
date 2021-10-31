@@ -32,7 +32,7 @@ def init():
     {"id": generate_id(), "question_id": "xYbce", "answer": "Just Do It!", "user_id": 1, "user_name": "hiroto"},
   ]
 
-  login_user = users[0]
+  login_user = {}
 
 
 # UTILS

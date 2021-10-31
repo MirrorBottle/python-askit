@@ -24,9 +24,12 @@ def show_question_answers():
   if question != False:
     print(f"\nPertanyaan:\n{question['question']}\n")
     answers = core.get_question_answers(question['id'])
-    print("Jawaban:\n")
-    for answer in answers:
-      print(f"> {answer['user_name']} : {answer['answer']}")
+    if answers != None:
+      print("Jawaban:\n")
+      for answer in answers:
+        print(f"> {answer['user_name']} : {answer['answer']}")
+    else:
+      print("Belum ada jawaban")
   else:
     print("Pertanyaan tidak ada!")
 

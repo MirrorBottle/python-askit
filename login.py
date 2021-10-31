@@ -13,3 +13,8 @@ def login():
     print("Anda berhasil login!\n")
   return is_exist
 
+def logout():
+  core.login_user = {}
+  print("Terima kasih! Sampai Jumpa!")
+  return True
+
