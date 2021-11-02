@@ -2,8 +2,14 @@ from nanoid import generate
 
 from login import login
 
+from os import system
+
 def generate_id():
   return generate(size=5)
+
+def clear():
+    _ = system('cls')
+
 
 def init():
   global login_user
@@ -55,6 +61,7 @@ def destroy(val, items, key = 'id'):
 def do_exit():
   user = {}
   print("Terima kasih! Sampai Jumpa!")
+  input()
   exit()
 
 
@@ -75,6 +82,7 @@ def store_user(user):
 
 # QUESTIONS
 def show_questions(is_all = True):
+  clear()
   curr_questions = questions if is_all else search(login_user['id'], questions, 'user_id')
   title = "DAFTAR PERTANYAAN ASKIT!" if is_all else "DAFTAR PERTANYAANMU!"
   print(f"""

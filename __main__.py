@@ -31,6 +31,8 @@ def main():
                 show_question_choice = input("Apa anda ingin menjawab pertanyaan? (y/n) ")
                 if show_question_choice == "y":
                   question.answer_question()
+                else:
+                  core.clear()
 
               # SEE QUESTION'S ANSWERS
               elif main_choice == "2":
@@ -70,6 +72,8 @@ def main():
         register()
       elif start_choice == "3":
         core.show_questions()
+      else:
+        print("\nMenu yang anda pilih tidak tersedia")
     else:
       core.do_exit()
 
