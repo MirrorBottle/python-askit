@@ -10,11 +10,13 @@ def login():
   is_exist = False if user == None else True
   if is_exist:
     core.login_user = user
-    print("Anda berhasil login!\n")
+    print("\nAnda berhasil login!")
+    input()
   return is_exist
 
 def logout():
   core.login_user = {}
   print("Terima kasih! Sampai Jumpa!")
+  input()
   return True
 
