@@ -1,17 +1,17 @@
 import core
 
 def show_start_menu():
-  print("""
+  print(core.Clr("Cyan",f"""
 SELAMAT DATANG DI ASKIT!
 ========================
 1) Login
 2) Register
 3) Lihat Pertanyaan
 4) Keluar
-  """)
+  """))
 
 def show_main_menu():
-  print(f"""
+  print(core.Clr("Cyan",f"""
 SELAMAT DATANG DI ASKIT, {core.login_user['name']}!
 ========================
 1) Lihat Daftar Pertanyaan
@@ -23,4 +23,4 @@ SELAMAT DATANG DI ASKIT, {core.login_user['name']}!
 7) Hapus Pertanyaanmu
 8) Daftar Jawabanmu
 9) Keluar
-  """)
+  """))
