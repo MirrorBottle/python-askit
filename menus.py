@@ -1,7 +1,7 @@
 import core
 
 def show_start_menu():
-  print(core.Clr("Cyan",f"""
+  print(core.Clr("Cyan","""
 SELAMAT DATANG DI ASKIT!
 ========================
 1) Login
