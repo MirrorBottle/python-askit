@@ -159,3 +159,9 @@ def destroy_answer(answer_id):
   destroy(answer_id, answers, 'id')
 
 
+# COLOURS
+def Clr(ColourName,text):
+  _ = system('')
+  Colour = ("Black","Red","Green","Yellow","Blue","Purple","Cyan","White")
+  SelectedColour = Colour.index(ColourName) + 30
+  return (f"\033[0;{SelectedColour};40m{text}\033[0;37;40m")
