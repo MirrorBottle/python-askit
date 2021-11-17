@@ -165,3 +165,7 @@ def Clr(ColourName,text):
   Colour = ("Black","Red","Green","Yellow","Blue","Purple","Cyan","White")
   SelectedColour = Colour.index(ColourName) + 30
   return (f"\033[0;{SelectedColour};40m{text}\033[0;37;40m")
+
+def printc(color, text):
+  print(Clr(color, text))
+

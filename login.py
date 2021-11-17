@@ -6,10 +6,10 @@ def login():
   user['name'] = input('Masukkan nama : ')
   user['password'] = getpass.getpass(prompt='Masukkan password : ')
 
-  user = core.get_user_by_name(user['name'])
-  is_exist = False if user == None else True
+  result = core.get_user_by_name(user['name'])
+  is_exist = result != None and result['password'] == user['password']
   if is_exist:
-    core.login_user = user
+    core.login_user = result
     print("\nAnda berhasil login!")
     input()
   return is_exist

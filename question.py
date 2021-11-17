@@ -57,11 +57,11 @@ def edit_question():
   question_id = input("Masukkan ID pertanyaan (huruf dalam kurung) : ")
   question = core.get_question(question_id)
   if question != None:
-    print(f"Pertanyaan Sebelumnya: {question['question']}")
+    core.printc("Cyan", f"Pertanyaan Sebelumnya: {question['question']}")
     new_question = input("Ubah Pertanyaan : ")
     new_question = new_question or question['question']
     core.update_question(question['id'], new_question)
-    print("Pertanyaan telah diubah!")
+    core.printc("Green", "Pertanyaan telah diubah!")
   else:
-    print("Pertanyaan tidak ditemukan!")
+    core.printc("Red", "Pertanyaan tidak ditemukan!")
 
