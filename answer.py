@@ -15,10 +15,10 @@ Jawaban [{answer['id']}] : {answer['answer']}
     if is_delete:
       core.destroy_answer(answer['id'])
       core.printc("Green","Jawaban telah dihapus!")
-      core.timedclear(2)
+      core.TapEnter()
   else:
     core.printc("Red","Jawaban tidak ditemukan!")
-    core.timedclear(1)
+    core.TapEnter()
 
 def show_answers():
   is_show = True
