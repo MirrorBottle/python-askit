@@ -15,7 +15,7 @@ def main():
     menus.show_start_menu()
     start_choice = input("Apa yang ingin anda lakukan? ")
 
-    if start_choice != "4":
+    if start_choice != "5":
       if start_choice == "1":
         is_login = login()
         if is_login:
@@ -72,6 +72,8 @@ def main():
         register()
       elif start_choice == "3":
         core.show_questions()
+      elif start_choice == "4":
+        question.show_question_answers()
       else:
         print("\nMenu yang anda pilih tidak tersedia")
     else:

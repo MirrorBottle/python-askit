@@ -7,7 +7,8 @@ SELAMAT DATANG DI ASKIT!
 1) Login
 2) Register
 3) Lihat Pertanyaan
-4) Keluar
+4) Lihat Jawaban Pertanyaan
+5) Keluar
   """))
 
 def show_main_menu():

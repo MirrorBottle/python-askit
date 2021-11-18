@@ -96,8 +96,10 @@ def show_questions(is_all = True):
     print("Anda tidak memiliki pertanyaan apapun...")
   print("\n========================")
 
-def get_question(question_id):
+def get_question(question_id, need_auth = False):
   question = find(question_id, questions)
+  if need_auth and question != None:
+    return question if question['user_id'] == login_user['id'] else None
   return question
 
 def get_question_answers(question_id):

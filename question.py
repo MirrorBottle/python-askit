@@ -42,7 +42,7 @@ def create_question():
 
 def delete_question():
   question_id = input("Masukkan ID pertanyaan (huruf dalam kurung) : ")
-  question = core.get_question(question_id)
+  question = core.get_question(question_id, True)
   if question != None:
     print(f"Pertanyaan [{question['id']}] : {question['question']}\n")
     is_delete = input("Apa anda yakin ingin menghapus pertanyaan? (y/n) ") == "y"
@@ -55,7 +55,7 @@ def delete_question():
 
 def edit_question():
   question_id = input("Masukkan ID pertanyaan (huruf dalam kurung) : ")
-  question = core.get_question(question_id)
+  question = core.get_question(question_id, True)
   if question != None:
     core.printc("Cyan", f"Pertanyaan Sebelumnya: {question['question']}")
     new_question = input("Ubah Pertanyaan : ")
