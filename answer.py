@@ -14,10 +14,10 @@ Jawaban [{answer['id']}] : {answer['answer']}
     is_delete = input("Apa anda yakin ingin menghapus jawaban? (y/n) ") == "y"
     if is_delete:
       core.destroy_answer(answer['id'])
-      print(core.Clr("Green","Jawaban telah dihapus!"))
+      core.printc("Green","Jawaban telah dihapus!")
       core.timedclear(2)
   else:
-    print(core.Clr("Red","Jawaban tidak ditemukan!"))
+    core.printc("Red","Jawaban tidak ditemukan!")
     core.timedclear(1)
 
 def show_answers():

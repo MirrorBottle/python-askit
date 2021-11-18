@@ -12,6 +12,6 @@ def register():
     core.printc("Green","Anda sudah terdaftar! Silahkan login!")
     core.timedclear(2)
   else:
-    print(core.Clr("Red","\nNama pengguna sudah ada!"))
+    core.printc("Red","\nNama pengguna sudah ada!")
     core.timedclear(2)
 

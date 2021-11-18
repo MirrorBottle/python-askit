@@ -69,7 +69,7 @@ def main():
             
             core.clear()
         else:
-          print(core.Clr("Red","\nAkun anda belum terdaftar! Silahkan register"))
+          core.printc("Red","\nAkun anda belum terdaftar! Silahkan register")
           core.timedclear(2)
       elif start_choice == "2":
         register()
