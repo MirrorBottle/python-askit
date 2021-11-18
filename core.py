@@ -4,11 +4,11 @@ from login import login
 
 from os import system
 
+import time
+import getpass
+
 def generate_id():
   return generate(size=5)
-
-def clear():
-    _ = system('cls')
 
 
 def init():
@@ -161,13 +161,23 @@ def destroy_answer(answer_id):
   destroy(answer_id, answers, 'id')
 
 
-# COLOURS
-def Clr(ColourName,text):
+# DECORATIONS
+def clear():
+    _ = system('cls')
+
+def timedclear(sec):
+  time.sleep(sec)
+  clear()
+
+def TapEnter():
+  print("\033[1;33;40m")
+  getpass.getpass(prompt='Tekan [Enter] untuk melanjutkan')
+  print("\033[0;37;40m")
+  clear()
+
+def printc(ColourName,text):
   _ = system('')
   Colour = ("Black","Red","Green","Yellow","Blue","Purple","Cyan","White")
   SelectedColour = Colour.index(ColourName) + 30
-  return (f"\033[0;{SelectedColour};40m{text}\033[0;37;40m")
-
-def printc(color, text):
-  print(Clr(color, text))
+  print(f"\033[0;{SelectedColour};40m{text}\033[0;37;40m")
 

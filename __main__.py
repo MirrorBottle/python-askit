@@ -66,16 +66,21 @@ def main():
 
             else:
               is_logout = logout()
+            
+            core.clear()
         else:
-          print("Akun anda belum terdaftar! Silahkan register")
+          core.printc("Red","\nAkun anda belum terdaftar! Silahkan register")
+          core.timedclear(2)
       elif start_choice == "2":
         register()
       elif start_choice == "3":
         core.show_questions()
+        core.TapEnter()
       elif start_choice == "4":
         question.show_question_answers()
       else:
         print("\nMenu yang anda pilih tidak tersedia")
+        core.timedclear(1)
     else:
       core.do_exit()
 
