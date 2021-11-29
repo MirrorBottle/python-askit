@@ -165,11 +165,11 @@ def destroy_answer(answer_id):
 def clear():
     _ = system('cls')
 
-def timedclear(sec):
+def timed_clear(sec):
   time.sleep(sec)
   clear()
 
-def TapEnter():
+def tap_enter():
   print("\033[1;33;40m")
   getpass.getpass(prompt='Tekan [Enter] untuk melanjutkan')
   print("\033[0;37;40m")

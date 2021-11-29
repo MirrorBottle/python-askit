@@ -70,17 +70,17 @@ def main():
             core.clear()
         else:
           core.printc("Red","\nAkun anda belum terdaftar! Silahkan register")
-          core.timedclear(2)
+          core.timed_clear(2)
       elif start_choice == "2":
         register()
       elif start_choice == "3":
         core.show_questions()
-        core.TapEnter()
+        core.tap_enter()
       elif start_choice == "4":
         question.show_question_answers()
       else:
         print("\nMenu yang anda pilih tidak tersedia")
-        core.timedclear(1)
+        core.timed_clear(1)
     else:
       core.do_exit()
 

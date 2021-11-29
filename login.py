@@ -11,12 +11,12 @@ def login():
   if is_exist:
     core.login_user = result
     core.printc("Green","\nAnda berhasil login!")
-    core.timedclear(1)
+    core.timed_clear(1)
   return is_exist
 
 def logout():
   core.login_user = {}
   core.printc("Cyan","\nTerima kasih! Sampai Jumpa!")
-  core.timedclear(1)
+  core.timed_clear(1)
   return True
 

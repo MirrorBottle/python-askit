@@ -19,7 +19,7 @@ def answer_question():
       is_answering = True if input("Apa anda ingin menjawab pertanyaan lain? (y/n) : ") == "y" else False
     else:
       core.printc("Red","Pertanyaan tidak ada!")
-      core.TapEnter()
+      core.tap_enter()
 
 def show_question_answers():
   question = get_question()
@@ -32,20 +32,20 @@ def show_question_answers():
       print("Jawaban:\n")
       for answer in answers:
         print(f"> {answer['user_name']} : {answer['answer']}")
-      core.TapEnter()
+      core.tap_enter()
     else:
       print("Belum ada jawaban")
-      core.TapEnter()
+      core.tap_enter()
   else:
     core.printc("Red","Pertanyaan tidak ada!")
-    core.TapEnter()
+    core.tap_enter()
 
 
 def create_question():
   question = input("\nMasukkan pertanyaanmu : ")
   new_question = core.store_question(question)
   core.printc("Green","Pertanyaan anda berhasil dibuat!")
-  core.TapEnter()
+  core.tap_enter()
 
 
 def delete_question():
@@ -57,10 +57,10 @@ def delete_question():
     if is_delete:
       core.destroy_question(question['id'])
       print("Pertanyaan telah dihapus!")
-      core.TapEnter()
+      core.tap_enter()
   else:
     print("Pertanyaan tidak ditemukan!")
-    core.TapEnter()
+    core.tap_enter()
 
 
 def edit_question():
@@ -72,8 +72,8 @@ def edit_question():
     new_question = new_question or question['question']
     core.update_question(question['id'], new_question)
     core.printc("Green", "Pertanyaan telah diubah!")
-    core.TapEnter()
+    core.tap_enter()
   else:
     core.printc("Red", "Pertanyaan tidak ditemukan!")
-    core.TapEnter()
+    core.tap_enter()
 
