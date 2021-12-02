@@ -12,13 +12,13 @@ def login():
     if is_exist:
       core.login_user = result
       core.printc("Green","\nAnda berhasil login!")
-      core.TapEnter()
+      core.tap_enter()
     return is_exist
   return False
 
 def logout():
   core.login_user = {}
-  print("Terima kasih! Sampai Jumpa!")
-  core.TapEnter()
+  core.printc("Cyan","\nTerima kasih! Sampai Jumpa!")
+  core.tap_enter()
   return True
 

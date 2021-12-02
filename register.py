@@ -10,11 +10,11 @@ def register():
     if is_exist == False:
       core.store_user(user)
       core.printc("Green","Anda sudah terdaftar! Silahkan login!")
-      core.TapEnter()
+      core.tap_enter()
     else:
       core.printc("Red","\nNama pengguna sudah ada!")
-      core.TapEnter()
+      core.tap_enter()
   else:
     core.printc("Red","\nNama dan password wajib diisi!")
-    core.TapEnter()
+    core.tap_enter()
 
