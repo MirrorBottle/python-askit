@@ -40,8 +40,11 @@ def init():
 
   login_user = {}
 
+  _ = system('')
+
 
 # UTILS
+
 def find(val, items, key = 'id'):
   return next((item for item in items if item[key] == val), None)
 
@@ -59,7 +62,7 @@ def destroy(val, items, key = 'id'):
         break
 
 def do_exit():
-  user = {}
+  login_user = {}
   print("Terima kasih! Sampai Jumpa!")
   input()
   exit()
@@ -72,7 +75,7 @@ def get_user_by_id(id):
 
 def get_user_by_name(name):
   return find(name, users, 'name')
-
+  
 def store_user(user):
   latest_user = max(users, key=lambda user:user['id'])
   user['id'] = latest_user['id'] + 1
@@ -176,7 +179,6 @@ def TapEnter():
   clear()
 
 def printc(ColourName,text):
-  _ = system('')
   Colour = ("Black","Red","Green","Yellow","Blue","Purple","Cyan","White")
   SelectedColour = Colour.index(ColourName) + 30
   print(f"\033[0;{SelectedColour};40m{text}\033[0;37;40m")

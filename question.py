@@ -12,7 +12,7 @@ def answer_question():
   is_answering = True
   while is_answering:
     question = get_question()
-    if question != False:
+    if question != None:
       print(f"\nPertanyaan:\n{question['question']}\n")
       answer = input("Masukkan jawaban anda : ")
       core.store_answer(answer, question)
@@ -24,7 +24,7 @@ def answer_question():
 def show_question_answers():
   question = get_question()
 
-  if question != False:
+  if question != None:
     core.clear()
     print(f"\nPertanyaan:\n{question['question']}\n")
     answers = core.get_question_answers(question['id'])
@@ -59,6 +59,7 @@ def delete_question():
       print("Pertanyaan telah dihapus!")
   else:
     print("Pertanyaan tidak ditemukan!")
+  core.TapEnter()
 
 
 def edit_question():
