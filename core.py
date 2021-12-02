@@ -4,7 +4,6 @@ from login import login
 
 from os import system
 
-import time
 import getpass
 
 def generate_id():
@@ -167,10 +166,6 @@ def destroy_answer(answer_id):
 # DECORATIONS
 def clear():
     _ = system('cls')
-
-def timed_clear(sec):
-  time.sleep(sec)
-  clear()
 
 def tap_enter():
   print("\033[1;33;40m")
